@@ -1,0 +1,12 @@
+allora, ci sono dei bei cookies, quindi fai ispeziona elemento, freccette >> a destra e 
+fai application, scorri in basso finché non vedi i cookie, ci sono vari valori e su
+permission c'è questo "04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb", bah non si 
+sa cos'è, quindi andiamo su https://crackstation.net e speriamo ci sia qualcosa, waw si funziona, è 
+in sha256 e vuol dire 'user', quindi ora sostituisco il valore in quello di 'admin' che codifico in sha256
+con un tool a caso online  tipo https://emn178.github.io/online-tools/sha256.html
+e "ottengo 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+
+provo a fare un login a caso con dei valori a caso (oooooh non refreshare la pagina per fare sta roba)
+e ottengo la flag spritz{thank_you_for_the_cookie}
+
+sempre spritz comunque, ora ne voglio uno

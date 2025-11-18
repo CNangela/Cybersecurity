@@ -1,0 +1,7 @@
+bona, molto più semplice del 2023 mannaggina, allora:
+1) fai ispeziona elemento e vai in application come sempre
+2) scorri fino a trovare i cookies e guarda che ci sta
+3) vedi user? bene cambialo in admin e entra con valori a caso
+4) trovata la flag: flag: spritz{N3zuk0-chaaaaan}
+
+carino, pls mettimelo all'esame 
