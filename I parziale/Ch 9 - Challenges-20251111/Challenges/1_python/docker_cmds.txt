@@ -1,0 +1,3 @@
+Build: docker build -t cpp/python .
+Run: docker run -d -p "127.0.0.1:8090:5000" --name "python" "cpp/python"
+Stop: docker stop python

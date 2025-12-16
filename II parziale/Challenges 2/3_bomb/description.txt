@@ -1,0 +1,12 @@
+You need to detonate the bomb.
+It has several security levels.
+
+This challenge is composed by 7 levels;
+however, we ask you to solve only the first four levels.
+
+
+SOLUTION:
+phase1) Border relations with Canada have never been better.
+phase2) 1 2 4 8 16 32
+phase3) 1 311
+phase4) 7 0

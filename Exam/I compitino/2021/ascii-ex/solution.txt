@@ -1,0 +1,13 @@
+basta analizzare un po' il cocice e cosa succede
+nel primo non guarda il numero ma l'ascii delle lettere e z è 122, il vettore
+deve avere lunghezza 2 e si separa da una a, quindi mettendo zaz creo un vettore di lunghezza 2
+e entra nel try, facendo il valore dell'ascii di z in indice 0 e sommandolo
+all'ascii di z dell'indice 1 cioè 122 + 122 ottengo >180
+
+nel secondo invece, 
+il terzo viene sostituito da uno con 2 lettere in più, quindi se avevo 
+SPRITZ -> SPTITZ, quindi devo mettere SPPITZ, ma ottengo SPRITZ, e nel passaggio
+successivo mi toglie le ricorrenze RI, quindi avrei solo SPTZ, allora scrivo SPPRIITZ, quindi nel
+primo passaggio mi diventa SPRRIITZ e nel secondo mi toglie solo RI in mezzo, lasciando SPRITZ
+
+ho ottenuto 8 punti e mi viene scritto COngr4t5!!! SPRITZCTF={webgame2020_03}
