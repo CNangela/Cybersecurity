@@ -31,6 +31,11 @@
 |ja	|Jump if Above	|if ((unsigned)x > y)|
 |jae	|Jump if Above or Equal	|if ((unsigned)x >= y)|
 
+## D. salto
+|istruzione|significato|hex|
+|----------|-----------|------|
+|jmp       |salta e basta|EB|
+
 # codici brutti di assembly
 |istruzione|significato|cosa fa|
 |----------|-----------|-------|
@@ -54,6 +59,23 @@ http://www.unixwiz.net/techtips/x86-jumps.html
 opzione 2: usa il sito https://hexed.it ed esporta la nuova versione
 
 se si vuole forzare una variabile ad essere 1, si può fare lo xor. Il valore dell xor è 31, mentre C0 è eax, sostituendo tre esadecimali con 2 resta uno spazio vuoto che va colmato con il nop (90) altrimenti da errore.
+
+
+per sostituire e creare lo xor: 
+- uso un registro a 64 bit -> 48
+- uso un registro a 32 bit -> niente prefisso
+il byte successivo è 31 e il prossimo identifica la variabile di registro
+
+|Valore (Binario)|Valore (Decimale)|Registro (64-bit)|Registro (32-bit)|
+|----------------|-----------------|-----------------|-----------------|
+|000             |0                |RAX              |              EAX|
+|001             |1                |RCX              |              ECX|
+|010             |2                |RDX              |              EDX|
+|011             |3                |RBX              |              EBX|
+|100             |4                |RSP              |              ESP|
+|101             |5                |RBP              |              EBP|
+|110             |6                |RSI              |              ESI|
+|111             |7                |RDI              |              EDI|
 
 # GDB
 per iniziare il gdb 
@@ -82,10 +104,16 @@ info variables
 info functions
 ```
 
+vedere l'assembly
+```
+disassemble funzione
+```
+
 leggere una variabile
 ```
 x/s &flag //guarda la stringa che si trova all'indirizzo di flag
 printf "%s", (char*) flag //guarda il contenuto di flag
+print $eax //o il registro dov'è locato quello che cerchi se è un int
 
 //se uno no funziona, usa l'altro
 ```

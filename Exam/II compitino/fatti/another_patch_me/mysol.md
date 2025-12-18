@@ -1,0 +1,5 @@
+metto l'eseguibile su ida e cerco il percorso per arrivare alla chiamata finale dove viene stampata la flag: ```spritz{CPP_is_great_CPP_is_life}```
+- il primo problema sorge con il cmp di 'Y' dove anche se scrivo valori random nel terminale, non mi fa continuare, non mi pongo problemi per capire come questo sia clcolato e semplicemente cambio il jzn in jn da 75 a 74
+- successivamente cambio il jz a jzn nello stesso modo per l'ID student
+- cambio allo stesso modo anche quello per il corso da scegliere perché quello da inserire era randomico, quindi io metto il numero 6 che so essere per forza diverso e passare al punto successivo
+- poi cambio il jle in jge (da 7E a 7D) perché nonostante non abbia guardato cosa fosse 95 in hex, comunque sicuramente è più alto di 0 e sarebbe andato in un ciclo lunghissimo finché la condizione di minoranza non si sarebbe rotta, lo stesso anche per loc_15CE
