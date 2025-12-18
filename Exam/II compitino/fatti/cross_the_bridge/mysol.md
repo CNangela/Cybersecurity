@@ -1,0 +1,3 @@
+- ho inizialmente disabilitato la funzione is_someone_cheating mettendo del nop sul cal _ptrace semplicemente sostituendo con 90 90 90 90 90.
+- ho sostituito la funzione per generare un numero casuale tra 0 e 1 e utilizzarlo come indicice per la stringa LR con un mov eac, 4Ch (L da hex) il quale corrisponde a 'L' (B8 4C 00 00 00) così ogni risposta a L/R sarà sempre L
+la flag è flag: SPRITZ{WhaT_A_fUn_gAme}
