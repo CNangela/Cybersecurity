@@ -114,6 +114,7 @@ leggere una variabile
 x/s &flag //guarda la stringa che si trova all'indirizzo di flag
 printf "%s", (char*) flag //guarda il contenuto di flag
 print $eax //o il registro dov'è locato quello che cerchi se è un int
+printf "%s", (char*) $rax //se da un numero, prova con questo 
 
 //se uno no funziona, usa l'altro
 ```
@@ -121,6 +122,8 @@ eseguire una funzione
 ```
 jump funzione
 ```
+trova tutte le parole con quello che stai cercando
+```strings nome_programma | grep "cerca"```
 
 # Fare PWN
 guardo da IDA lo spazio allocato al buffer e lo riempio tutto, in base al codice sottostante capisco come agire affinché lo sovrascriva. Esempio:
@@ -187,6 +190,7 @@ metto dei codici utili, questo serve per ottenere l'indirizzo di una parola cerc
 
 # GOT e PLT
 GOT (Global Offset Table) = contiene gli indirizzi reali delle funzioni e risiede in memoria
-PLT (Procedure Linkage Table) = sistema di inoltro chiamate, esempio. se faccio  ```call puts``` in realtà faccio ```puts@plt```, la PLT guarda dentro la GOT, prende l'indirizzo reale e ci salta
-una vulnerabilità ci permette di scrivere dove vogliamo per modificare la GOT -> possiamo linkare un'aòtra funzione al posto di quella precedente e cambiare il corso del programma. 
-per trovare gli indirizzi delle funzioni continua ad usare py che è più semplice, ma ricorda che per funzioni che stanno in un area diversa di memoria dal codice devi usare ```elf.got``` e non ```elf.symbol```
+PLT (Procedure Linkage Table) = sistema di inoltro chiamate, esempio: se faccio  ```call puts``` in realtà faccio ```puts@plt```, la PLT guarda dentro la GOT, prende l'indirizzo reale e ci salta
+una vulnerabilità ci permette di scrivere dove vogliamo per modificare la GOT -> possiamo linkare un'altra funzione al posto di quella precedente e cambiare il corso del programma. 
+
+per trovare gli indirizzi delle funzioni continua ad usare py che è più semplice, ma ricorda che per funzioni che stanno in un area diversa di memoria dal codice devi usare ```elf.got``` e non ```elf.symbols```
